@@ -7,6 +7,8 @@ public class student {
     String email;
     String name;
     String password;
+    long following;
+    long connections;
 
     public String getEmail() {
         return email;
@@ -30,5 +32,21 @@ public class student {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public long getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(long following) {
+        this.following = following;
+    }
+
+    public long getConnections() {
+        return connections;
+    }
+
+    public void setConnections(long connections) {
+        this.connections = connections;
     }
 }

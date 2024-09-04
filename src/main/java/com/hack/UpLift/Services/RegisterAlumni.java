@@ -3,6 +3,7 @@ package com.hack.UpLift.Services;
 import com.hack.UpLift.Model.alumni;
 import com.hack.UpLift.Model.student;
 import com.hack.UpLift.Repo.alumniRepo;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,9 +17,8 @@ public class RegisterAlumni {
         repo.save(alumni);
     }
 
-    public boolean loginAlumni(String email, String password) {
+    public boolean loginAlumni(String email, String password, HttpSession session) {
         Optional<alumni> foundAlumni = repo.findById(email);
-
         if (foundAlumni.isPresent()) {
             alumni alumni = foundAlumni.get();
             if (alumni.getPassword().equals(password)) {
@@ -29,7 +29,7 @@ public class RegisterAlumni {
                 return false;
             }
         } else {
-            System.out.println("Alumni not found");
+            System.out.println("Student not found");
             return false;
         }
     }

@@ -1,7 +1,4 @@
 package com.hack.UpLift.Services;
-
-import com.hack.UpLift.Controller.studentController;
-import com.hack.UpLift.Model.LoginRequest;
 import com.hack.UpLift.Model.student;
 import com.hack.UpLift.Repo.studentRepo;
 import jakarta.servlet.http.HttpSession;
@@ -35,4 +32,5 @@ private studentRepo repo;
             return false;
         }
     }
+
 }
