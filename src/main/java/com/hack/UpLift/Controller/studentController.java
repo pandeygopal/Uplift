@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -35,9 +34,8 @@ public class studentController {
 
         if (loginSuccessful) {
             System.out.println("session which is set "+ session.getId());
-            session.setAttribute("LoginRequest",loginRequest );
             System.out.println("login hua");
-            return ResponseEntity.status(HttpStatus.OK).body("std_dash.html");
+            return ResponseEntity.status(HttpStatus.OK).body(session.getId());
         } else {
             System.out.println("login nahi hua");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
