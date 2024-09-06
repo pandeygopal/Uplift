@@ -35,7 +35,8 @@ public class studentController {
         if (loginSuccessful) {
             System.out.println("session which is set "+ session.getId());
             System.out.println("login hua");
-            return ResponseEntity.status(HttpStatus.OK).body(session.getId());
+            String responseBody = "std_dash.html, sessionId: " + session.getId();
+            return ResponseEntity.status(HttpStatus.OK).body(responseBody);
         } else {
             System.out.println("login nahi hua");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
