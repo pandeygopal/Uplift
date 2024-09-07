@@ -65,6 +65,7 @@ public class studentController {
                         PostResponse postResponse = new PostResponse();
                         postResponse.setId(post.getPostId());
                         postResponse.setPostDesc(post.getPostDesc());
+                        postResponse.setPostTitle(post.getPostTitle());
 
                         if (post.getImageData() != null) {
                             // Convert image data to Base64
@@ -86,6 +87,7 @@ class PostResponse {
     private Long id;
     private String postDesc;
     private String imageUrl;
+    private String postTitle;
 
     // Getters and Setters
 
@@ -111,6 +113,14 @@ class PostResponse {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getPostTitle() {
+        return postTitle;
+    }
+
+    public void setPostTitle(String postTitle) {
+        this.postTitle = postTitle;
     }
 }
 

@@ -13,6 +13,7 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long postId;
     String postDesc;
+    String postTitle;
     long postLike;
     long postComments;
     private String imageName;
