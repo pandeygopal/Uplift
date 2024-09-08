@@ -88,6 +88,8 @@ class PostResponse {
     private String postDesc;
     private String imageUrl;
     private String postTitle;
+    private long postLike;
+    private long postComments;
 
     // Getters and Setters
 
@@ -121,6 +123,22 @@ class PostResponse {
 
     public void setPostTitle(String postTitle) {
         this.postTitle = postTitle;
+    }
+
+    public long getPostLike() {
+        return postLike;
+    }
+
+    public void setPostLike(long postLike) {
+        this.postLike = postLike;
+    }
+
+    public long getPostComments() {
+        return postComments;
+    }
+
+    public void setPostComments(long postComments) {
+        this.postComments = postComments;
     }
 }
 
